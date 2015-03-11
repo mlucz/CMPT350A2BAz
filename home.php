@@ -140,7 +140,7 @@
 			
 			$ctr = 1;
 			
-			if($result->rowCOunt() > 0){
+			if($result->rowCount() > 0){
 			echo "<div class='col-lg-9'>";
 				while($row = $result->fetch(PDO::FETCH_ASSOC)){
 					if($ctr == 1){
