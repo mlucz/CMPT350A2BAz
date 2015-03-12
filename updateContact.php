@@ -146,6 +146,9 @@
 									</div></div>
 									<div class='cl-xs-12'>
 										<button class='btn btn-block btn-custom' type='submit' id='submit' >Update</button>
+										<a class='btn btn-warning btn-block' href='home.php'>
+													Cancel
+												</a>
 									</div>
 									
 								  </form>

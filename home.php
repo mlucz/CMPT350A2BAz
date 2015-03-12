@@ -170,7 +170,7 @@
 												<a class='btn btn-custom btn-block' href='updateContact.php?ContactID=".$row["id"]."'>
 													Update
 												</a>
-												<a class='btn btn-custom btn-block' href='deleteContact.php?ContactID=".$row["id"]."' 
+												<a class='btn btn-danger btn-block' href='deleteContact.php?ContactID=".$row["id"]."' 
 													onclick='return confirm(\"are you sure?\")'>
 													Delete
 												</a>
@@ -198,10 +198,10 @@
 											</div>
 											<div class='panel-footer'>
 												
-												<a class='btn btn-warning' href='updateContact.php?ContactID=".$row["id"]."'>
+												<a class='btn btn_block btn-custom' href='updateContact.php?ContactID=".$row["id"]."'>
 													Update
 												</a>
-												<a class='btn btn-danger' href='deleteContact.php?ContactID=".$row["id"]."' 
+												<a class='btn btn-block btn-danger' href='deleteContact.php?ContactID=".$row["id"]."' 
 													onclick='return confirm(\"are you sure?\")'>
 													Delete
 												</a>
