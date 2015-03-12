@@ -194,7 +194,7 @@
 								echo "	<a class='btn btn-warning btn-block disabled' href='updateContact.php?ContactID=".$row["id"]."'>
 												Update
 											</a>
-											<a class='btn btn-danger btn-block' href='deleteContact.php?ContactID=".$row["id"]."' 
+											<a class='btn btn-danger btn-block disabled' href='deleteContact.php?ContactID=".$row["id"]."' 
 												onclick='return confirm(\"are you sure?\")'>
 												Delete
 											</a>";
@@ -202,7 +202,7 @@
 								echo "		<a class='btn btn-warning btn-block' href='updateContact.php?ContactID=".$row["id"]."'>
 													Update
 												</a>
-												<a class='btn btn-danger btn-block disabled' href='deleteContact.php?ContactID=".$row["id"]."' 
+												<a class='btn btn-danger btn-block ' href='deleteContact.php?ContactID=".$row["id"]."' 
 													onclick='return confirm(\"are you sure?\")'>
 													Delete
 												</a>";
@@ -236,7 +236,7 @@
 								echo "	<a class='btn btn-warning btn-block disabled' href='updateContact.php?ContactID=".$row["id"]."'>
 												Update
 											</a>
-											<a class='btn btn-danger btn-block' href='deleteContact.php?ContactID=".$row["id"]."' 
+											<a class='btn btn-danger btn-block disabled' href='deleteContact.php?ContactID=".$row["id"]."' 
 												onclick='return confirm(\"are you sure?\")'>
 												Delete
 											</a>";
@@ -244,7 +244,7 @@
 								echo "		<a class='btn btn-warning btn-block' href='updateContact.php?ContactID=".$row["id"]."'>
 													Update
 												</a>
-												<a class='btn btn-danger btn-block disabled' href='deleteContact.php?ContactID=".$row["id"]."' 
+												<a class='btn btn-danger btn-block ' href='deleteContact.php?ContactID=".$row["id"]."' 
 													onclick='return confirm(\"are you sure?\")'>
 													Delete
 												</a>";
