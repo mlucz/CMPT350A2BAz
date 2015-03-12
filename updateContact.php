@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>MYSQL Contacts</title>
+    <title>Address Book</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -39,7 +39,7 @@
 	<div class="jumbotron" id="jumbotron">
       <div class="container" align="center">
 	  <!--<img class="img-responsive  img-circle img-thumbnail" src="mike.jpg"> -->
-        <h1 id="name">MYSQL Address Book</h1>
+        <h1 id="name">Azure Address Book</h1>
 		<hr class="star-light">
 		<h3 id="title"> Author: mjl566</h3>
    
