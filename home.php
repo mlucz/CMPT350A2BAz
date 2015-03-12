@@ -116,7 +116,7 @@
 					  <input type="text" class="form-control"name="note"id="note" placeholder="Enter a note">
 					</div></div>
 					<div class="cl-xs-12">
-						<button class="btn btn-block btn-primary" type="submit" id="submit" >Submit</button>
+						<button class="btn btn-block btn-custom" type="submit" id="submit" >Submit</button>
 					</div>
 					
 				  </form>
@@ -167,10 +167,10 @@
 												<p>Note: ".$row["note"]."</p>
 											</div>
 											<div class='panel-footer'>
-												<a class='btn btn-warning btn-block' href='updateContact.php?ContactID=".$row["id"]."'>
+												<a class='btn btn-custom btn-block' href='updateContact.php?ContactID=".$row["id"]."'>
 													Update
 												</a>
-												<a class='btn btn-danger btn-block' href='deleteContact.php?ContactID=".$row["id"]."' 
+												<a class='btn btn-custom btn-block' href='deleteContact.php?ContactID=".$row["id"]."' 
 													onclick='return confirm(\"are you sure?\")'>
 													Delete
 												</a>
