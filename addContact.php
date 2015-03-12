@@ -96,7 +96,6 @@
 			}
 			header("Refresh: 5; url=home.php");
 		 ?> 
-		 <a href="home.php">Back to Contacts </a>
         
       </div><!-- /.row -->
 
