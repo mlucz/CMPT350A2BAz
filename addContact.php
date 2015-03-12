@@ -84,7 +84,7 @@
 					
 				$conn->exec($sql);
 				
-				echo "<div class='alert alert-success' role='alert'>Added Contact!</br> You are being redirected
+				echo "<div class='alert alert-success' role='alert'><h1>Added Contact!</h1></br> You are being redirected
 						  <a href='home.php class='alert-link'>Home.</a>
 						</div>";
 				
