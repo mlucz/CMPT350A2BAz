@@ -191,11 +191,20 @@
 											<div class='panel-footer'>
 												<a class='btn btn-warning btn-block' href='updateContact.php?ContactID=".$row["id"]."'>
 													Update
-												</a>
+												</a>";
+					if($id == $row["id"]){
+						echo "
 												<a class='btn btn-danger btn-block' href='deleteContact.php?ContactID=".$row["id"]."' 
 													onclick='return confirm(\"are you sure?\")'>
 													Delete
-												</a>
+												</a>";
+					else
+						echo "
+												<a class='btn btn-danger btn-block disabled' href='deleteContact.php?ContactID=".$row["id"]."' 
+													onclick='return confirm(\"are you sure?\")'>
+													Delete
+												</a>";
+					echo "
 											</div>
 										</div>
 									</div>
