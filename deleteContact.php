@@ -72,9 +72,7 @@
 					
 				$conn->query($sql) ;
 				
-				echo echo "<div class='alert alert-success' role='alert'>Contact has been Deleted! You are being redirected
-						  <a href='home.php class='alert-link'>Home.</a>
-						</div>";
+				echo  "<div class='alert alert-success' role='alert'>Contact has been Deleted! You are being redirected<a href='home.php class='alert-link'>Home.</a></div>";
 				
 			}
 			
