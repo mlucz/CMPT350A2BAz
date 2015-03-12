@@ -61,7 +61,7 @@
 			try{
 				$conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
 				$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-				echo "Connection successfully</br>";
+				//echo "Connection successfully</br>";
 			}
 			catch(Exception $e){
 				die("Connection failed: ".print_r($e));
@@ -85,7 +85,7 @@
 						<div class='col-lg-3'  >
 							<div class='panel panel-default'>
 								<div class='panel-heading text-center'>
-									<h4>Add a Contact</h4>
+									<h4>Update Contact</h4>
 								</div>
 								<div class='panel-body'>
 									<div id='error'>
@@ -145,7 +145,7 @@
 									  <input type='text' class='form-control'name='note'id='note' value='".$row["note"]."' >
 									</div></div>
 									<div class='cl-xs-12'>
-										<button class='btn btn-block btn-custom' type='submit' id='submit' >Update</button>
+										<button class='btn btn-block btn-custom' type='submit' id='submit' >Save Changes</button>
 										<a class='btn btn-warning btn-block' href='home.php'>
 													Cancel
 												</a>
@@ -220,10 +220,10 @@
 											</div>
 											<div class='panel-footer'>
 												
-												<a class='btn btn-warning' href='updateContact.php?ContactID=".$row["id"]."'>
+												<a class='btn btn-block btn-warning' href='updateContact.php?ContactID=".$row["id"]."'>
 													Update
 												</a>
-												<a class='btn btn-danger' href='deleteContact.php?ContactID=".$row["id"]."' 
+												<a class='btn btn-block btn-danger' href='deleteContact.php?ContactID=".$row["id"]."' 
 													onclick='return confirm(\"are you sure?\")'>
 													Delete
 												</a>

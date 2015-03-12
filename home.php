@@ -198,7 +198,7 @@
 											</div>
 											<div class='panel-footer'>
 												
-												<a class='btn btn_block btn-custom' href='updateContact.php?ContactID=".$row["id"]."'>
+												<a class='btn btn-block btn-custom' href='updateContact.php?ContactID=".$row["id"]."'>
 													Update
 												</a>
 												<a class='btn btn-block btn-danger' href='deleteContact.php?ContactID=".$row["id"]."' 
