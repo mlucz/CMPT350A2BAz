@@ -198,12 +198,13 @@
 													onclick='return confirm(\"are you sure?\")'>
 													Delete
 												</a>";
-					else
+					}else{
 						echo "
 												<a class='btn btn-danger btn-block disabled' href='deleteContact.php?ContactID=".$row["id"]."' 
 													onclick='return confirm(\"are you sure?\")'>
 													Delete
 												</a>";
+					}
 					echo "
 											</div>
 										</div>
