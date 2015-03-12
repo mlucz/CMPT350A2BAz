@@ -78,14 +78,17 @@
 				$adate = strtotime($row["add_date"]);
 				//echo "<p>".$bday."</p>";
 				$adate = date('Y-m-d', $adate);
-				echo "<p>".$adate."</p>";
+				//echo "<p>".$adate."</p>";
 				
 				echo "
 					<div class='row'>
 						<div class='col-lg-3'  >
-							<div class='drop-shadow img-rounded'>
-								<h2>Update Contact</h2>
-								<div id='error'>
+							<div class='panel panel-default'>
+								<div class='panel-heading text-center'>
+									<h4>Add a Contact</h4>
+								</div>
+								<div class='panel-body'>
+									<div id='error'>
 									Please check for errors!
 								</div>
 								  <form class='form-horizontal' action='update.php' method='post' >
@@ -142,10 +145,11 @@
 									  <input type='text' class='form-control'name='note'id='note' value='".$row["note"]."' >
 									</div></div>
 									<div class='cl-xs-12'>
-										<button class='btn btn-block' type='submit' id='submit' >Update</button>
+										<button class='btn btn-block bnt-primary' type='submit' id='submit' >Update</button>
 									</div>
 									
 								  </form>
+								  </div>
 							</div>
 						</div>";
 			

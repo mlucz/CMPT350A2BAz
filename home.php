@@ -55,9 +55,12 @@
       <!-- Three columns of text below the carousel -->
       <div class="row">
 		<div class="col-lg-3"  >
-			<div class="drop-shadow img-rounded">
-				<h2>Add a Contact</h2>
-				<div id="error">
+			<div class="panel panel-default">
+				<div class="panel-heading text-center">
+					<h4>Add a Contact</h4>
+				</div>
+				<div class="panel-body">
+					<div id="error">
 					Please check for errors!
 				</div>
 				  <form class="form-horizontal" action="addContact.php" method="post" >
@@ -113,10 +116,11 @@
 					  <input type="text" class="form-control"name="note"id="note" placeholder="Enter a note">
 					</div></div>
 					<div class="cl-xs-12">
-						<button class="btn btn-block" type="submit" id="submit" >Submit</button>
+						<button class="btn btn-block btn-primary" type="submit" id="submit" >Submit</button>
 					</div>
 					
 				  </form>
+				</div>
 			</div>
         </div><!-- /.col-lg-3 -->
 		
@@ -147,30 +151,29 @@
 						echo	"
 							
 								<div class='row'>
-									<div class='col-lg-4 img-rounded'  >
-										<div class='drop-shadow img-rounded'>
-											<div class='row'>
-												<div class='col-sm-4'>
-													<img class='img-responsive img-circle' src='contact.png' alt='Generic placeholder image' >
-													<a href='updateContact.php?ContactID=".$row["id"]."'>
-														Update
-													</a>
-													<a href='deleteContact.php?ContactID=".$row["id"]."' 
-														onclick='return confirm(\"are you sure?\")'>
-														Delete
-													</a>
-												</div>
-												<div class='col-sm-8'>
-													<h4>".$row["firstname"]." ".$row["lastname"]."</h4>
-													<p>Company: ".$row["company"]."</p>
-													<p>Phone: ".$row["phone"]."</p>
-													<p>Email: ".$row["email"]."</p>
-													<p>URL: ".$row["url"]."</p>
-													<p>Address: ".$row["address"]."</p>
-													<p>Birthday: ".$row["birthday"]."</p>
-													<p>Date: ".$row["add_date"]."</p>
-													<p>Note: ".$row["note"]."</p>
-												</div>
+									<div class='col-lg-4 '>
+										<div class='panel panel-default'  >
+											<div class='panel-heading text-center'>
+														<h4>".$row["firstname"]." ".$row["lastname"]."</h4>
+											</div>
+											<div class='panel-body'>
+												<p>Company: ".$row["company"]."</p>
+												<p>Phone: ".$row["phone"]."</p>
+												<p>Email: ".$row["email"]."</p>
+												<p>URL: ".$row["url"]."</p>
+												<p>Address: ".$row["address"]."</p>
+												<p>Birthday: ".$row["birthday"]."</p>
+												<p>Date: ".$row["add_date"]."</p>
+												<p>Note: ".$row["note"]."</p>
+											</div>
+											<div class='panel-footer'>
+												<a class='btn btn-warning btn-block' href='updateContact.php?ContactID=".$row["id"]."'>
+													Update
+												</a>
+												<a class='btn btn-danger btn-block' href='deleteContact.php?ContactID=".$row["id"]."' 
+													onclick='return confirm(\"are you sure?\")'>
+													Delete
+												</a>
 											</div>
 										</div>
 									</div>
@@ -179,35 +182,35 @@
 					}else{
 						echo	"
 									<div class='col-lg-4 img-rounded'  >
-										<div class='drop-shadow img-rounded'>
-											<div class='row'>
-												<div class='col-sm-4'>
-													<img class='img-responsive img-circle' src='contact.png' alt='Generic placeholder image' >
-													<a href='updateContact.php?ContactID=".$row["id"]."'>
-														Update
-													</a>
-													<a href='deleteContact.php?ContactID=".$row["id"]."' 
-														onclick='return confirm(\"are you sure?\")'>
-														Delete
-													</a>
-												</div>
-												<div class='col-sm-8'>
-													<h4>".$row["firstname"]." ".$row["lastname"]."</h4>
-													<p>Company: ".$row["company"]."</p>
-													<p>Phone: ".$row["phone"]."</p>
-													<p>Email: ".$row["email"]."</p>
-													<p>URL: ".$row["url"]."</p>
-													<p>Address: ".$row["address"]."</p>
-													<p>Birthday: ".$row["birthday"]."</p>
-													<p>Date: ".$row["add_date"]."</p>
-													<p>Note: ".$row["note"]."</p>
-												</div>
+										<div class='panel panel-default'  >
+											<div class='panel-heading text-center'>
+														<h4>".$row["firstname"]." ".$row["lastname"]."</h4>
+											</div>
+											<div class='panel-body'>
+												<p>Company: ".$row["company"]."</p>
+												<p>Phone: ".$row["phone"]."</p>
+												<p>Email: ".$row["email"]."</p>
+												<p>URL: ".$row["url"]."</p>
+												<p>Address: ".$row["address"]."</p>
+												<p>Birthday: ".$row["birthday"]."</p>
+												<p>Date: ".$row["add_date"]."</p>
+												<p>Note: ".$row["note"]."</p>
+											</div>
+											<div class='panel-footer'>
+												
+												<a class='btn btn-warning' href='updateContact.php?ContactID=".$row["id"]."'>
+													Update
+												</a>
+												<a class='btn btn-danger' href='deleteContact.php?ContactID=".$row["id"]."' 
+													onclick='return confirm(\"are you sure?\")'>
+													Delete
+												</a>
 											</div>
 										</div>
 									</div>";
 						if($ctr == 3){
 							$ctr = 1;
-							echo "</div><div class='row' style='padding: 5px'><hr></div>";
+							echo "</div><div class='row' style='padding: 5px'></div>";
 						}else{
 							$ctr ++;
 						}
