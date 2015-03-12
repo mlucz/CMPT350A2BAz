@@ -79,12 +79,10 @@
 			}
 			
 			catch(PDOException $e){
-				echo  "<div class='alert alert-danger' role='alert'>Error deleting contact :".$e->getMessage()."
-						</div><a href='home.php class='alert-link'>Go Home.</a>";
+				echo  "<div class='alert alert-danger' role='alert'>Error deleting contact :".$e->getMessage()."</div><a href='home.php class='alert-link'>Go Home.</a>";
 			}
 			header("Refresh: 5; url=home.php");
 		 ?> 
-		 <a href="home.php">Back to Contacts </a>
         
       </div><!-- /.row -->
 
