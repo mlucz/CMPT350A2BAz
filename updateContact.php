@@ -188,24 +188,26 @@
 												<p>Date: ".$row["add_date"]."</p>
 												<p>Note: ".$row["note"]."</p>
 											</div>
-											<div class='panel-footer'>
-												<a class='btn btn-warning btn-block' href='updateContact.php?ContactID=".$row["id"]."'>
+											<div class='panel-footer'>";
+												
+							if($id == $row["id"]){
+								echo "	<a class='btn btn-warning btn-block disabled' href='updateContact.php?ContactID=".$row["id"]."'>
+												Update
+											</a>
+											<a class='btn btn-danger btn-block' href='deleteContact.php?ContactID=".$row["id"]."' 
+												onclick='return confirm(\"are you sure?\")'>
+												Delete
+											</a>";
+							}else{
+								echo "		<a class='btn btn-warning btn-block' href='updateContact.php?ContactID=".$row["id"]."'>
 													Update
-												</a>";
-					if($id == $row["id"]){
-						echo "
-												<a class='btn btn-danger btn-block' href='deleteContact.php?ContactID=".$row["id"]."' 
-													onclick='return confirm(\"are you sure?\")'>
-													Delete
-												</a>";
-					}else{
-						echo "
+												</a>
 												<a class='btn btn-danger btn-block disabled' href='deleteContact.php?ContactID=".$row["id"]."' 
 													onclick='return confirm(\"are you sure?\")'>
 													Delete
 												</a>";
-					}
-					echo "
+							}
+							echo "
 											</div>
 										</div>
 									</div>
@@ -228,15 +230,26 @@
 												<p>Date: ".$row["add_date"]."</p>
 												<p>Note: ".$row["note"]."</p>
 											</div>
-											<div class='panel-footer'>
+											<div class='panel-footer'>";
 												
-												<a class='btn btn-block btn-warning' href='updateContact.php?ContactID=".$row["id"]."'>
+							if($id == $row["id"]){
+								echo "	<a class='btn btn-warning btn-block disabled' href='updateContact.php?ContactID=".$row["id"]."'>
+												Update
+											</a>
+											<a class='btn btn-danger btn-block' href='deleteContact.php?ContactID=".$row["id"]."' 
+												onclick='return confirm(\"are you sure?\")'>
+												Delete
+											</a>";
+							}else{
+								echo "		<a class='btn btn-warning btn-block' href='updateContact.php?ContactID=".$row["id"]."'>
 													Update
 												</a>
-												<a class='btn btn-block btn-danger' href='deleteContact.php?ContactID=".$row["id"]."' 
+												<a class='btn btn-danger btn-block disabled' href='deleteContact.php?ContactID=".$row["id"]."' 
 													onclick='return confirm(\"are you sure?\")'>
 													Delete
-												</a>
+												</a>";
+							}
+							echo "
 											</div>
 										</div>
 									</div>";
