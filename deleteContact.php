@@ -60,7 +60,7 @@
 			try{
 				$conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
 				$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-				echo "Connection successfully</br>";
+				//echo "Connection successfully</br>";
 			}
 			catch(Exception $e){
 				die("Connection failed: ".print_r($e));
@@ -72,7 +72,7 @@
 					
 				$conn->query($sql) ;
 				
-				echo  "<div class='alert alert-success' role='alert'>Contact has been Deleted! You are being redirected<a href='home.php class='alert-link'>Home.</a></div>";
+				echo  "<div class='alert alert-success' role='alert'><h1>Contact has been Deleted!</h1> You are being redirected<a href='home.php class='alert-link'>Home.</a></div>";
 				
 			}
 			
