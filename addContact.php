@@ -84,11 +84,14 @@
 					
 				$conn->exec($sql);
 				
-				echo "<h1>Added Contact: ".$_POST['fname']." ".$_POST['lname']."</h1>";
+				echo "<div class='alert alert-success' role='alert'>Added Contact!</br> You are being redirected
+						  <a href='home.php class='alert-link'>Home.</a>
+						</div>";
 				
 			}
 			catch(Exception $e){
-				echo $sql."<br>".$e->getMessage();
+				echo "<div class='alert alert-danger' role='alert'>Error updating contact :".$e->getMessage()."
+						</div><a href='home.php class='alert-link'>Go Home.</a>";
 			
 			}
 			header("Refresh: 5; url=home.php");

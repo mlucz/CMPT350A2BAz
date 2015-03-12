@@ -60,7 +60,7 @@
             try{
                 $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
                 $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-                echo "Connection successfully</br>";
+                //echo "Connection successfully</br>";
             }
             catch(Exception $e){
                 die("Connection failed: ".print_r($e));
