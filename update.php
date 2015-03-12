@@ -53,16 +53,18 @@
       <!-- Three columns of text below the carousel -->
       <div class="row">
 		<?php
-			$servername="lovett.usask.ca";
-			$username = "cmpt350_mjl566";
-			$dbname = "cmpt350_mjl566";
-			$password = "j3n1l21kn0";
-			
-			$conn = new mysqli($servername,$username,$password,$dbname);
-			
-			if($conn->connect_error){
-				die("Connection failed: ".$conn->connect_error);
-			}
+			$server = "tcp:gpntf5hrgo.database.windows.net,1433";
+            $user = "SQLAdmin";
+            $pwd = "henry0422!";
+            $db = "Assignment2";
+            try{
+                $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
+                $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+                echo "Connection successfully</br>";
+            }
+            catch(Exception $e){
+                die("Connection failed: ".print_r($e));
+            }
 			
 			
 			

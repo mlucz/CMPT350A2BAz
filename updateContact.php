@@ -162,7 +162,7 @@
 			
 			//if($result->num_rows > 0){
 			echo "<div class='col-lg-9'>";
-				while($row = $result->fetch_assoc()){
+				while($row = $result->fetch(PDO::FETCH_ASSOC)){
 					if($ctr == 1){
 						echo	"
 								<div class='row'>
