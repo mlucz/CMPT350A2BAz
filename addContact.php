@@ -53,39 +53,44 @@
       <!-- Three columns of text below the carousel -->
       <div class="row">
 		<?php
-			$servername="lovett.usask.ca";
-			$username = "cmpt350_mjl566";
-			$dbname = "cmpt350_mjl566";
-			$password = "j3n1l21kn0";
-			
-			$conn = new mysqli($servername,$username,$password,$dbname);
-			
-			if($conn->connect_error){
-				die("Connection failed: ".$conn->connect_error);
-			}else{
-				echo "Database connection succesful. ";
+			$server = "tcp:gpntf5hrgo.database.windows.net,1433";
+			$user = "SQLAdmin";
+			$pwd = "henry0422!";
+			$db = "Assignment2";
+			try{
+				$conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
+				$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+				echo "Connection successfully</br>";
+			}
+			catch(Exception $e){
+				die("Connection failed: ".print_r($e));
 			}
 			
-			$sql = "INSERT INTO AddressBook(firstname, lastname, company, phone, email, url, address,";
-			
-			if(!empty($_POST["birthday"])){
-				$sql .= "birthday,";
-			}
-			$sql .= "add_date,note)
-					VALUES ('".$_POST['fname']."', '".$_POST['lname']."','".$_POST['company']."', '".$_POST['phone']."',
-					'".$_POST['email']."','".$_POST['url']."', '".$_POST['address']."',";
-			
-			if(!empty($_POST["birthday"])){
-				$sql .= "'".$_POST['birthday']."',";
-			}		
+			try{
+				$sql = "INSERT INTO AddressBook(firstname, lastname, company, phone, email, url, address,";
+				
+				if(!empty($_POST["birthday"])){
+					$sql .= "birthday,";
+				}
+				$sql .= "add_date,note)
+						VALUES ('".$_POST['fname']."', '".$_POST['lname']."','".$_POST['company']."', '".$_POST['phone']."',
+						'".$_POST['email']."','".$_POST['url']."', '".$_POST['address']."',";
+				
+				if(!empty($_POST["birthday"])){
+					$sql .= "'".$_POST['birthday']."',";
+				}		
+						
+				$sql .= "'".$_POST['add_date']."', '".$_POST['note']."')";
 					
-			$sql .= "'".$_POST['add_date']."', '".$_POST['note']."')";
+				$conn->exec($sql);
 				
-			if($conn->query($sql) == TRUE)
 				echo "<h1>Added Contact: ".$_POST['fname']." ".$_POST['lname']."</h1>";
-			else
-				echo "\nError adding contact: ".$conn->error;
 				
+			}
+			catch(Exception $e){
+				echo $sql."<br>".$e->getMessage();
+			
+			}
 			header("Refresh: 5; url=home.php");
 		 ?> 
 		 <a href="home.php">Back to Contacts </a>

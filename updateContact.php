@@ -53,23 +53,26 @@
     <div class="container-fluid">
 		
 		<?php
-			$servername="lovett.usask.ca";
-			$username = "cmpt350_mjl566";
-			$dbname = "cmpt350_mjl566";
-			$password = "j3n1l21kn0";
+			$server = "tcp:gpntf5hrgo.database.windows.net,1433";
+			$user = "SQLAdmin";
+			$pwd = "henry0422!";
+			$db = "Assignment2";
 			
-			$conn = new mysqli($servername,$username,$password,$dbname);
-			
-			if($conn->connect_error){
-				die("Connection failed: ".$conn->connect_error);
+			try{
+				$conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
+				$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+				echo "Connection successfully</br>";
+			}
+			catch(Exception $e){
+				die("Connection failed: ".print_r($e));
 			}
 			
 			$id=$_GET['ContactID'];
 			$sql = "SELECT * FROM AddressBook WHERE id=".$id;
 			$result = $conn->query($sql);
 			
-			if($result->num_rows > 0){
-				$row = $result->fetch_assoc();
+			//if($result->num_rows > 0){
+				$row = $result->fetch(PDO::FETCH_ASSOC);
 				
 				
 				$adate = strtotime($row["add_date"]);
@@ -146,7 +149,7 @@
 							</div>
 						</div>";
 			
-			}
+			//}
 			
 			
 			
@@ -157,7 +160,7 @@
 			$result = $conn->query($sql);
 			$ctr = 1;
 			
-			if($result->num_rows > 0){
+			//if($result->num_rows > 0){
 			echo "<div class='col-lg-9'>";
 				while($row = $result->fetch_assoc()){
 					if($ctr == 1){
@@ -227,7 +230,7 @@
 					}//end inside if
 				} //endWhile
 				echo "</div>";
-			} //end main if
+			//} //end main if
 			
 		 ?> 
 		   
