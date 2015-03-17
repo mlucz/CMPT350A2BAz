@@ -18,8 +18,8 @@
                 die("Connection failed: ".print_r($e));
             }
 			
-			 $sql = "CREATE TABLE AddressBook(
-				id INT(6) UNSIGNED AUTO_INCREMENT,
+			 $sql = "CREATE TABLE AddressBook (
+				id INT AUTO_INCREMENT,
 				firstname VARCHAR(30) NOT NULL,
 				lastname VARCHAR(30) NOT NULL,
 				company VARCHAR(30),
