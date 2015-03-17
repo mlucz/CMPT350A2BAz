@@ -32,7 +32,9 @@
 				note VARCHAR(255)
 			)";
 			
-			if($conn->query($sql) == TRUE)
+			$result = $conn->query($sql);
+			
+			if($result->fetch())
 				echo "Table AddressBook created succefully";
 			else
 				echo "Error creating table: ".$conn->error;
