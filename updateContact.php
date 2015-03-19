@@ -80,6 +80,9 @@
 				$adate = date('Y-m-d', $adate);
 				//echo "<p>".$adate."</p>";
 				
+				$bddate = strtotime($row["birthday"]);
+				$bddate = date('Y-m-d', $bddate);
+				
 				echo "
 					<div class='row'>
 						<div class='col-lg-3'  >
@@ -132,7 +135,7 @@
 									<div class='form-group'>
 									  <label for='brithday' class='col-xs-3'>Birthday:</label>
 									  <div class='col-xs-8'>
-									  <input type='date' class='form-control'name='birthday' id='birthday'  >
+									  <input type='date' class='form-control'name='birthday' id='birthday'  value='".$bddate."'>
 									</div></div>
 									<div class='form-group'>
 									  <label for='add_date' class='col-xs-3'>Date:</label>
