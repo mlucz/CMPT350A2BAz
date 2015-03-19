@@ -80,8 +80,11 @@
 				$adate = date('Y-m-d', $adate);
 				//echo "<p>".$adate."</p>";
 				
-				$bddate = strtotime($row["birthday"]);
-				$bddate = date('Y-m-d', $bddate);
+				if(!empty($row["birthday"])){
+					$bddate = strtotime($row["birthday"]);
+					$bddate = date('Y-m-d', $bddate);
+				}else
+					$bddate = "0000-00-00";
 				
 				echo "
 					<div class='row'>
