@@ -18,20 +18,7 @@
                 die("Connection failed: ".print_r($e));
             }
 			
-			 $sql = "CREATE TABLE AddressBook (
-				id INT IDENTITY(1,1),
-				firstname VARCHAR(30) NOT NULL,
-				lastname VARCHAR(30) NOT NULL,
-				company VARCHAR(30),
-				phone VARCHAR(30) NOT NULL,
-				email VARCHAR(255) NOT NULL,
-				url VARCHAR(255),
-				address VARCHAR(255) NOT NULL,
-				birthday DATE,
-				add_date DATE NOT NULL,
-				note VARCHAR(255),
-				PRIMARY KEY(id)
-			)";
+			 $sql = "DROP TABLE AddressBook";
 			
 			
 			
@@ -39,7 +26,7 @@
 			
 			try{
 				$result = $conn->query($sql);
-				echo "Table created";
+				echo "Table dropped";
 			}
 			
 			catch(Exception $e){
